@@ -1,30 +1,31 @@
 # How to Set Up a Mac from Scratch
 
-## 1. Download and Install Microsoft Edge
-By default, macOS comes with Safari as the primary web browser. However, if you prefer Microsoft Edge, follow these steps:
+This guide provides a step-by-step process to configure a Mac for optimal performance, usability, and development.
+
+## 1. Download and Install Browsers
+By default, macOS comes with Safari as the primary web browser. However, if you prefer Microsoft Edge or Google Chrome, follow these steps:
 
 - Open Safari (pre-installed on macOS).
 - Go to the official Microsoft Edge download page: **[Download Microsoft Edge](https://www.microsoft.com/edge)**.
+- Go to the official Google Chrome download page: **[Download Google Chrome](https://www.google.com/intl/en/chrome/)**.
 - Set Edge as the default browser: Open **System Settings → Default Browser → Microsoft Edge**.
 
-## 2. Install Logitech MX Setup to Set Up MX Series Mouse
-If you're using a Logitech MX series mouse, install Logitech MX Setup to customize its settings:
+## 2. Install Logitech Options+ to Set Up MX Series Mouse
+If you're using a Logitech MX series mouse, install Logitech Options+ to customize its settings:
 
-- Go to the official Logitech Options+ download page: **[Download Logitech MX Setup](https://www.logitech.com/en-us/setup/mxsetup.html)**.
+- Go to the official Logitech Options+ download page: **[Download Logitech Options+](https://www.logitech.com/en-us/setup/mxsetup.html)**.
 - Click "Download for macOS" and wait.
 
 ## 3. Install Essential Apps from the Mac App Store
-The following apps improve usability, performance, and development capabilities:
+Enhance usability, performance, and development with these essential apps:
 
 - Open App Store from the Dock or Launchpad.
 - Search for and install the following apps:
   - **Telegram** – A fast and secure messaging app.
   - **Speedtest by Ookla** – To test internet speed.
-  - **HiddenBar** – To manage and hide menu bar icons.
   - **Amphetamine** – Prevents Mac from sleeping when needed.
   - **Windows App** – Allows access to Microsoft apps on Mac.
   - **Xcode** – Apple’s official development environment for macOS and iOS apps.
-- Once installed, open each app and configure settings as needed.
 
 ## 4. Download and Install ChatGPT for Mac
 The ChatGPT app allows you to access AI-powered assistance directly from your Mac:
@@ -32,7 +33,15 @@ The ChatGPT app allows you to access AI-powered assistance directly from your Ma
 - Go to the official OpenAI ChatGPT download page: **[Download ChatGPT for Mac](https://openai.com/blog/chatgpt-apps)**.
 
 ## 5. Adjust Mac System Settings
+
 To optimize performance and usability, adjust the following system settings:
+
+### Dock and UI Enhancements
+- **Change Dock position to left and enable auto-hide**: System Settings → Dock & Menu Bar → Position on screen: **Left**, toggle **Automatically hide and show the Dock**.
+- **Set a very short timer for a super quick jump-in animation in the Dock**:
+  ```sh
+  defaults write com.apple.dock autohide-time-modifier -float 0.15; killall Dock
+  ```
 
 ### Disable "Wake for Network Access"
 Prevents your Mac from waking up unnecessarily due to network activity:
@@ -70,11 +79,11 @@ Prevents your Mac from waking up unnecessarily due to network activity:
 ### Additional System Settings
 
 - **Show battery percentage**: System Settings → Battery → Show Battery Percentage (Enable).
-- **Change Dock position to left and enable auto-hide**: System Settings → Dock & Menu Bar → Position on screen: **Left**, toggle **Automatically hide and show the Dock**.
 - **Turn off suggested and recent apps on Dock**: System Settings → Desktop & Dock → Show recent applications in Dock (Disable).
 - **Disable notifications on lock screen**: System Settings → Notifications → Allow notifications when locked (Disable).
 - **Delete "Do Not Disturb" schedules**: System Settings → Focus → Do Not Disturb (Remove any schedules).
 - **Never start a screen saver**: System Settings → Screen Saver → Start after: **Never**.
+- **Change hot corner settings using Option key**: Adjust hot corners in **System Settings → Desktop & Dock → Hot Corners** while holding the **Option** key.
 
 ## 6. Add Google Account (Sync All Except Contacts)
 
@@ -101,9 +110,8 @@ Run the following command in Terminal:
 After installation, add Homebrew to your PATH:
 
 ```sh
-echo >> /Users/tarielinc/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tarielinc/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+echo 'eval "$( /opt/homebrew/bin/brew shellenv )"' >> /Users/tarielinc/.zprofile
+eval "$( /opt/homebrew/bin/brew shellenv )"
 ```
 
 ### Install AppLite (GUI for Homebrew)
@@ -125,6 +133,7 @@ brew install --cask applite
 - Set **New Finder windows show** to **Downloads**.
 - Under **Advanced**, set **When performing a search** to **Search this Mac**.
 - Enable **Show Path Bar** (View → Show Path Bar).
+- Enable **Show Status Bar** (View → Show Status Bar).
 
 ### Change Screenshot Location
 
@@ -148,5 +157,30 @@ killall SystemUIServer
 - Download **[PearCleaner](https://github.com/alienator88/Pearcleaner/releases)**.
 - Install and configure as needed.
 
+### Install Additional Useful Apps
+
+- **[Marta File Manager](https://marta.sh/)** – A fast dual-pane file manager.
+- **[KeyClu](https://sergii.tatarenkov.name/keyclu/support/)** – Simple and handy overview of applications shortcuts.
+- **[Ice](https://github.com/jordanbaird/Ice)** – A menu bar management tool.
+
 ---
-Your Mac is now set up and optimized for productivity, development, and personal use! 🚀
+
+## Setting Up GitHub on macOS
+
+### 1. Install GitHub Desktop
+
+1. Go to **[Download GitHub Desktop](https://desktop.github.com/)**.
+2. Launch GitHub Desktop and sign in with your GitHub account.
+
+### 2. Configure Git in Terminal
+
+To use Git from the terminal, set up your username and email:
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+---
+
+Your Mac is now fully set up and optimized for productivity, development, and personal use! 🚀
