@@ -163,6 +163,20 @@ killall SystemUIServer
 - **[KeyClu](https://sergii.tatarenkov.name/keyclu/support/)** – Simple and handy overview of applications shortcuts.
 - **[Ice](https://github.com/jordanbaird/Ice)** – A menu bar management tool.
 
+
+
+- **[Yandex Music](https://music.yandex.ru/download/)** - Music streaming app.
+
+- **[GeForce NOW](https://gfn.am/en/download.html)** - Instantly play the most demanding PC games and seamlessly play across your devices.
+
+- **[TextMate](https://macromates.com/)** - MPowerful and customizable text editor with support for a huge list of programming languages and developed as open source.
+
+- **[IINA](https://iina.io/)** - The modern media player for macOS.
+
+- **[VMware Fusion](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Fusion&freeDownloads=true)** - Let run virtual machines on a Windows, Linux or Mac computer. (You will need a customer account at support.broadcom.com to access downloads.)
+
+
+
 ---
 
 ## Setting Up GitHub on macOS
